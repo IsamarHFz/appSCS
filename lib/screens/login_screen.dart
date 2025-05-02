@@ -1,5 +1,5 @@
-import 'package:app_scs/screens/sign_in_screen.dart';
-import 'package:app_scs/theme/app_theme.dart';
+import 'package:app_scs/screens/iniciar_sesion_screen.dart';
+import 'package:app_scs/temas/app_tema.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: AppTheme.foundColor, 
+      decoration: AppTema.foundColor, 
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: _page(),
@@ -48,10 +48,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _icon() {
   return Container(
     decoration: BoxDecoration (
-      border: Border.all(color: AppTheme.iconColor, width: 2),
+      border: Border.all(color: AppTema.iconColor, width: 2),
       shape: BoxShape.circle),
       child: const Icon( Icons.person,
-        color: AppTheme.iconColor, 
+        color: AppTema.iconColor, 
         size: 120.0,
       ),
     );
@@ -63,14 +63,14 @@ class _LoginScreenState extends State<LoginScreen> {
     {isPassword = false} ){
       var border = OutlineInputBorder(
         borderRadius: BorderRadius.circular(18.0),
-        borderSide: const BorderSide(color: AppTheme.iconColor)
+        borderSide: const BorderSide(color: AppTema.iconColor)
       );
       return TextField(
-        style: const TextStyle(color: AppTheme.iconColor),
+        style: const TextStyle(color: AppTema.iconColor),
         controller: controller,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: const TextStyle(color: AppTheme.iconColor),
+          hintStyle: const TextStyle(color: AppTema.iconColor),
           enabledBorder: border,
           focusedBorder: border
         ),
@@ -92,37 +92,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 Navigator.push(context, route2);
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppTheme.buttonColor,
+          backgroundColor: AppTema.buttonColor,
           padding: const EdgeInsets.symmetric(vertical: 16.0)
         ), 
         child: const SizedBox(
           width: double.infinity,
           child: Text(
             "Iniciar sesión", 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20.0,
-              color: AppTheme.iconColor,
+              color: AppTema.iconColor,
             ),
         )),
       );
@@ -134,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
       textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: 16.0,
-        color: AppTheme.textColor,
+        color: AppTema.textColor,
         ),
       );
   }

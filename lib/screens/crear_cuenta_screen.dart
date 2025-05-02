@@ -1,14 +1,14 @@
-import 'package:app_scs/theme/app_theme.dart';
+import 'package:app_scs/temas/app_tema.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+class CrearCuenta extends StatefulWidget {
+  const CrearCuenta({super.key});
 
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<CrearCuenta> createState() => _CrearCuentaState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _CrearCuentaState extends State<CrearCuenta> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -17,7 +17,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: AppTheme.foundColor,
+      decoration: AppTema.foundColor,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -52,12 +52,12 @@ class _SignUpState extends State<SignUp> {
   Widget _icon() {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: AppTheme.iconColor, width: 2),
+        border: Border.all(color: AppTema.iconColor, width: 2),
         shape: BoxShape.circle,
       ),
       child: const Icon(
         Icons.person,
-        color: AppTheme.iconColor,
+        color: AppTema.iconColor,
         size: 120.0,
       ),
     );
@@ -66,14 +66,14 @@ class _SignUpState extends State<SignUp> {
   Widget _inputField(String hintText, TextEditingController controller, {bool isPassword = false}) {
     var border = OutlineInputBorder(
       borderRadius: BorderRadius.circular(18.0),
-      borderSide: const BorderSide(color: AppTheme.iconColor),
+      borderSide: const BorderSide(color: AppTema.iconColor),
     );
     return TextField(
-      style: const TextStyle(color: AppTheme.iconColor),
+      style: const TextStyle(color: AppTema.iconColor),
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: AppTheme.iconColor),
+        hintStyle: const TextStyle(color: AppTema.iconColor),
         enabledBorder: border,
         focusedBorder: border,
       ),
@@ -96,7 +96,7 @@ class _SignUpState extends State<SignUp> {
         debugPrint('Registro exitoso: ${usernameController.text}, ${emailController.text}');
       },
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppTheme.buttonColor,
+        backgroundColor: AppTema.buttonColor,
         padding: const EdgeInsets.symmetric(vertical: 16.0),
       ),
       child: const SizedBox(
@@ -106,7 +106,7 @@ class _SignUpState extends State<SignUp> {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
-            color: AppTheme.iconColor,
+            color: AppTema.iconColor,
           ),
         ),
       ),

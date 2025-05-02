@@ -1,4 +1,4 @@
-import 'package:app_scs/theme/app_theme.dart';
+import 'package:app_scs/temas/app_tema.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -12,10 +12,10 @@ class SignIn extends StatelessWidget {
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 40.0,
-              color: AppTheme.textColor,
+              color: AppTema.textColor,
             ),
       ),
-        decoration: AppTheme.foundColor,
+        decoration: AppTema.foundColor,
     );
   }
 }

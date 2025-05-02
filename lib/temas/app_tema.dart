@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; 
 
-class AppTheme {
+class AppTema {
   static const textColor = Color.fromARGB(255, 0, 0, 0);
   static const iconColor = Color.fromARGB(255, 255, 255, 255);
   static const buttonColor = Color.fromARGB(210, 33, 126, 10);
